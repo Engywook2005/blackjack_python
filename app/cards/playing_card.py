@@ -24,8 +24,6 @@ class Card:
             self.color = 'red'
         else: 
             self.color = 'joker'
-
-        return self
     
     def get_type(self):
         return self.card_type
