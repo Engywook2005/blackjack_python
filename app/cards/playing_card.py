@@ -1,6 +1,6 @@
 class Card:
-    def __init__(self, suit, num):
-        numbers = list(range(2, 9))
+    def __init__(self, suit, denom):
+        numbers = list(range(2, 11))
         numbers_as_string = map(str, numbers)
         face_cards = ['j', 'q', 'k']
         ace_cards = ['a']
@@ -8,7 +8,7 @@ class Card:
         red_suits = ['diamonds', 'hearts']
 
         self.suit = suit
-        self.designation = str(num)
+        self.designation = str(denom)
         if self.designation in numbers_as_string:
             self.card_type = 'num'
         elif self.designation in face_cards:
