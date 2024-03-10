@@ -27,6 +27,7 @@ class Deck:
     def draw_card(self):
         dealed_card = self.shuffled_cards[0]
         self.shuffled_cards = np.delete(self.shuffled_cards, 0)
+        dealed_card.set_face_up(False)
         return dealed_card
     
     def burn_card(self, card):

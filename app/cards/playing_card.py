@@ -40,3 +40,10 @@ class Card:
     
     def get_face_up(self):
         return self.face_up 
+    
+    # The only setting that can be updated after card is created
+    # If reshuffling will need to make sure car is facedown
+    def set_face_up(self, reveal = None):
+        if reveal == None:
+            self.face_up = not self.face_up
+
