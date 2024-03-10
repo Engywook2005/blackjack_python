@@ -8,13 +8,13 @@ class Card:
         red_suits = ['diamonds', 'hearts']
 
         self.suit = suit
-        self.designation = str(denom)
+        self.denom = str(denom)
         self.face_up = False
-        if self.designation in numbers_as_string:
+        if self.denom in numbers_as_string:
             self.card_type = 'num'
-        elif self.designation in face_cards:
+        elif self.denom in face_cards:
             self.card_type = 'face'
-        elif self.designation in ace_cards:
+        elif self.denom in ace_cards:
             self.card_type = 'ace'
         else:
             self.card_type = 'joker'
@@ -29,8 +29,8 @@ class Card:
     def get_type(self):
         return self.card_type
 
-    def get_designation(self):
-        return self.designation
+    def get_denom(self):
+        return self.denom
 
     def get_suit(self):
         return self.suit
