@@ -9,6 +9,7 @@ class Card:
 
         self.suit = suit
         self.designation = str(denom)
+        self.face_up = False
         if self.designation in numbers_as_string:
             self.card_type = 'num'
         elif self.designation in face_cards:
@@ -36,3 +37,6 @@ class Card:
 
     def get_color(self):
         return self.color 
+    
+    def get_face_up(self):
+        return self.face_up 
